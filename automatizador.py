@@ -38,7 +38,7 @@ def criar():
     with open('.gitignore', 'w') as git:
         git.write("")
     print("feito, até o próximo codigo")
-
+#lembre de arrumar a parte do user, se nao ninguém poderá usar
 print('Bem vindo ao criador de pastas amigo!')
 print("Este aqui, é uma automatização das suas pastas, para que você apenas precise se preocupar em codar em html, css e js")
 diretorio = input("Vamos começar então... Primeiro, qual diretório você deseja colocar?")
@@ -64,3 +64,13 @@ if pasta == 'Não' or pasta == 'não':
     print("Beleza, você que manda!")
     criar()
     
+#vamo la pensar primeiro, primeiro eu crirei uma função para que eu não precise repetir elas nos ifs, nessa função teriamos os inputs
+#Esses inputs, teriam o nome do documento, cada um com seu arquivo referente, html, css e js
+#após os inputs, oque eu fiz foi o with open('nome com tipo de arquivo', 'w para escrever') as archive como exemplo de comando para se passar pelo documento
+#Logo após isso, como eu tinha resultados de inputs para nomes, eu apenas contantenei com o tipo de arquivo
+#outra coisa que eu fiz foi criar um conteudo para ser escrito no documento correspondente, no caso o comando basico, lago que fazendo rapido demoraria 2 minuros
+# Estilos e corpo de html basico feito, posso começar o codigo real, esse foi a função
+# Primeiro, queremos o diretorio, criei três condições, duas para caminhos base, download e document, cada um com values de erros também sendo representados como or
+# Nele, ele faria o valor do diretorio se tornar o próprio diretório que criei como variavel, e assim usando o os.chdir, que redireciona de acordo com o seu parametro
+# Logo após isso, eu quis uma função de criar pastas, todo mundo precisa de uma pasta, assim, eu usei o mkdir com ifs, onde se sim ele criaria o mkdir com o nome da pasta que queria fazer
+# criando uma pasta com o value do input, e se não não criaria, depois eu apenas usei a função, já que usaria o mesmo código duas vezes eu preferi o uso de função. 
